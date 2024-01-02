@@ -25,8 +25,14 @@ File 'config.json' stores the name of the dex. This serves as the source name th
 
 # Next steps
 
-Automatic search and hyperlink is yet to be implemented.
+Automatic search and hyperlink.
 
 Neural network control for smarter website generation with images, tables etc.
+
+# Bots 4 U Consultancy
+
+If you'd like a human coder to implement and maintain this project within your organization's codebase, we have yearly contracts. Contact us at manonthemoon13131@gmail.com.
+
+
 
 
