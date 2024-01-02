@@ -1,0 +1,19 @@
+body {
+    background-color: black;
+  }
+  h1 {
+    color: rgb(240, 240, 240); font-family:consolas; text-align: center;
+  }
+  p {
+    color: rgb(220, 220, 220); font-family:arial; font-size: larger; letter-spacing: 0.05em;
+  }
+  h3 {
+    color: white; bottom:0; font-family:consolas; width: 100%; text-align: center;
+  }
+  a {
+    color: #00ff41;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
