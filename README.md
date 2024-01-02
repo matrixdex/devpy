@@ -3,7 +3,7 @@ Webdex is a Python library and script to generate a website from text, PDF and J
 
 Dependencies: PyPDF2
 
-Run dev.py to create supporting directories and a sample dex. 'Assets' folder, 'styles.css' file must be present in directory and root directory must be where 'dev.py' is stored.
+Run dev.py to create supporting directories and a sample dex. Current working directory (where Python command is run) must be where 'dev.py' file, 'assets' folder and 'styles.css' file are present.
 
 ```bash
 python dev.py
