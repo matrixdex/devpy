@@ -17,23 +17,31 @@ pip install PyPDF2
 python dev.py
 ```
 
-Run dev.py to create supporting directories and a sample dex. Current working directory (where Python command is run) must be where 'dev.py' file, 'assets' folder and 'styles.css' file are present. Running dev.py for the first time generates folders [backup, dex, raw, webdex] and files [config.json, data.json].
+Run dev.py to create supporting directories and a sample dex. Current working directory (where Python command is run) must be where 'dev.py' file, 'assets' folder and ```styles.css``` file are present. Running dev.py for the first time generates folders ```/backup```, ```/dex```, ```/raw```, ```/webdex``` and files ```config.json``` and ```data.json```.
+
+### Add PDFs
+
+Add PDFs to ```/raw``` folder.
+
+```bash python dev.py```. This generates editable ```dummy.json``` in root directory.
+
+Run ```bash python dev.py``` again to generate webdex in ```/dex``` folder.
+
+Editable ```dummy.json``` for hyperlinks and formatting.
 
 ### Viewing website
 
-Open 'index.html' in folder 'dex'.
+Open ```index.html``` in ```/dex``` folder.
 
 ### Adding data manually
 
-Edit 'data.json' to add your data. Run 'dev.py' to re-generate website with new data (backup functionality not added here)
+Manually edit ```data.json```. 
 
-```bash
-python dev.py
-```
+```bash python dev.py``` to re-generate website with new data (backup functionality not added here).
 
 ### Adding data from PDF, TXT and JSON files
 
-Add PDF, text and JSON files to 'raw' folder. Run 'dev.py'. This generates 'dummy.json'. Run 'dev.py' again to generate dex in 'dex' folder.
+Add PDF, text and JSON files to ```/raw``` folder. Run ```bash python dev.py``` to generate ```dummy.json```. Run ```bash python dev.py``` again to generate webdex in ```/dex``` folder.
 
 ```bash
 python dev.py
