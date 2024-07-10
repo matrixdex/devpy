@@ -17,15 +17,18 @@ pip install PyPDF2
 python dev.py
 ```
 
-Run dev.py to create supporting directories and a sample dex. Current working directory (where Python command is run) must be where 'dev.py' file, 'assets' folder and ```styles.css``` file are present. Running dev.py for the first time generates folders ```/backup```, ```/dex```, ```/raw```, ```/webdex``` and files ```config.json``` and ```data.json```.
+Creates supporting directories and a sample dex. Root directory where Python command is run must have ```dev.py```, ```/assets``` folder and ```styles.css```. Running ```dev.py``` for the first time generates folders ```/backup```, ```/dex```, ```/raw``` and ```/webdex```, and files ```config.json``` and ```data.json```.
 
 ### Add PDFs
 
 Add PDFs to ```/raw``` folder.
 
-```bash python dev.py```. This generates editable ```dummy.json``` in root directory.
+```bash 
+python dev.py
+```
+This generates editable ```dummy.json``` in root directory.
 
-Run ```bash python dev.py``` again to generate webdex in ```/dex``` folder.
+Run ```python dev.py``` again to generate webdex in ```/dex``` folder.
 
 Editable ```dummy.json``` for hyperlinks and formatting.
 
@@ -37,7 +40,10 @@ Open ```index.html``` in ```/dex``` folder.
 
 Manually edit ```data.json```. 
 
-```bash python dev.py``` to re-generate website with new data (backup functionality not added here).
+```bash
+python dev.py
+```
+Re-generate website with new data (backup functionality not added here).
 
 ### Adding data from PDF, TXT and JSON files
 
