@@ -84,17 +84,17 @@ Each webpage object in ```data.json``` and ```dummy.json``` is a JSON object.
 
 ### Root directory structure
 
-Folder 'dex': Website root folder with HTML files, styles.css and 'assets' folder. This folder Index.html is the entry point to this website. This website referred to as dex.
+```/dex``` folder: Website root folder with HTML files, ```styles.css``` and ```/assets``` folder. ```/dex/index.html``` is the entry point to this website, also referred to as dex and webdex.
 
-Folder 'backup': Contains backup of 'data.json' file. This backup is updated when 'data.json' is updated using files from the 'raw' folder.
+```backup``` folder: Contains backup of ```data.json```. This backup is updated when ```data.json``` is updated using files from the ```/raw``` folder.
 
-Folder 'raw': Used to append data to the dex. Add PDF, text and JSON files here. The first time you add files here and run dev.py, text from these files will be added to 'dummy.json'. You can make changes to 'dummy.json' before committing it source 'data.json'. Once data is added to 'dummy.json' from the 'raw' folder, files in the 'raw' folder are moved to the 'clear' subfolder within the 'raw' folder.
+```raw``` folder: Appends data to the dex. Add PDF, text and JSON files here. The first time you add files here and run ```python dev.py```, text from these files will be added to ```dummy.json```. You can edit ```dummy.json``` before committing it to source ```data.json```. Once data is added to ```dummy.json``` from the ```/raw``` folder, files in the ```/raw``` folder are moved to the ```/raw/clear``` subfolder within the ```/raw``` folder.
 
-Folder 'webdex': TODO implement a library for dev.py's functionality.
+```/webdex``` directory: TODO implement a library for ```dev.py```.
 
-File 'data.json': Contains the source code for each webpage. 'Data.json' stores a list of objects in JSON format. Each object contains a 'title' string and a 'body' list of strings. 'Title' denotes title of the HTML page and name of the HTML file for that page for easier hyperlinking. Lowercase, space and special character (not number) removed title string forms the HTML filename. This file is meant to be edited in Visual Studio Code, using it as a word editor.
+```data.json```: Contains the source code for each webpage. ```data.json``` stores a list of objects in JSON format. Each object contains a ```title``` string and a ```body``` list of strings. 'Title' denotes title of the HTML page and name of the HTML file for that page for easier hyperlinking. Lowercase, space and special character (not number) removed title string forms the HTML filename. This file is meant to be edited in Visual Studio Code, using it as a word editor.
 
-File 'config.json': Stores the name of the dex. This serves as the source name that is used across the script as dexname. It also stores the name of the author.
+```config.json```: Stores the name of the dex. This serves as the source name that is used across the script as dexname. It also stores the name of the author.
 
 ### Backup functionality
 
@@ -105,7 +105,7 @@ When ```data.json``` is updated with data from ```dummy.json``` (from ```/raw```
 [The Matrix Dex](https://alinoorul.github.io) is a webdex. Current webdex workflow of this website's maintainer comprises of editing ```data.json```, running ```dev.py``` to get updated website and adding updated HTML files to the project hosted [here](https://github.com/alinoorul/alinoorul.github.io) on GitHub Pages. [https://alinoorul.github.io](https://alinoorul.github.io) is the free URL thanks to GitHub.  
 
 ## TL; DR
-Run dev.py once. Put PDFs in raw folder. Run dev.py twice. index.html in the dex folder is your website. 
+Run ```python dev.py``` once. Put PDFs in ```/raw``` folder. Run ```python dev.py``` twice. ```/dex/index.html``` (in the ```/dex``` folder) is your website. 
 
 ### Next steps
 
