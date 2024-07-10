@@ -66,6 +66,10 @@ File 'data.json': Contains the source code for each webpage. 'Data.json' stores 
 
 File 'config.json': Stores the name of the dex. This serves as the source name that is used across the script as dexname. It also stores the name of the author.
 
+### Working example
+
+[The Matrix Dex](https://alinoorul.github.io) is a webdex. Current webdex workflow of this website's maintainer comprises of editing ```data.json```, running ```dev.py``` to get updated website and adding updated HTML files to the [project][https://github.com/alinoorul/alinoorul.github.io] hosted on GitHub Pages. [https://alinoorul.github.io](https://alinoorul.github.io) is the free URL thanks to GitHub.  
+
 ## TL; DR
 Run dev.py once. Put PDFs in raw folder. Run dev.py twice. index.html in the dex folder is your website. 
 
