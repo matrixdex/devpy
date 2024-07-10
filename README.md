@@ -1,5 +1,9 @@
 # Webdex
-Webdex is a Python library and script to generate a website from text, PDF and JSON files. It converts text from files into a JSON intermediate format. This JSON intermediate contains a list of objects, each of which builds a webpage in the website. The object (source code) for each webpage contains a 'title' string and a 'body' list of strings. Each string in 'body' makes a paragraph in the webpage. Links are added to these strings that hyperlink to other pages in the dex.
+Webdex generates a website from text, PDF and JSON files using a Python script ```dev.py```. It helps freely host and rapidly update [The Matrix Dex](https://alinoorul.github.io). Webdex is built in [Research Engine](https://alinoorul.github.io/researchengine.html) so scientists host their own journals. 
+
+Get a webdex to put your research papers on the Internet for free. Read TL;DR to get your research online fast. 
+
+Webdex converts text from files into a JSON intermediate format. This JSON intermediate contains a list of objects, each of which builds a webpage in the website. The object (source code) for each webpage contains a 'title' string and a 'body' list of strings. Each string in 'body' makes a paragraph in the webpage. Links are added to these strings that hyperlink to other pages in the dex.
 
 ### Installation
 
