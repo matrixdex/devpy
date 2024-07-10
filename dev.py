@@ -91,12 +91,19 @@ def pdf_to_json_by_page(pdf_file):
 
 def pdf_to_json(pdf_file):
     pdf_reader = PyPDF2.PdfReader(pdf_file)
-    title=pdf_reader.metadata['/Title']
+    title=''
+    if '/Title' not in pdf_reader.metadata.keys() or pdf_reader.metadata['/Title']=='':
+        print("title not found. first 20 characters made title")
+    else:
+        title=pdf_reader.metadata['/Title']
     data=[] # list of pages if this was new dex
     count_break=0
     for i in range(len(pdf_reader.pages)):
         page = pdf_reader.pages[i]
         text = str(page.extract_text())
+        if title=='':
+            m=text.split('\n')
+            title=m[0]
         data.append(text)
         count_break+=text.count('\n')   
     if count_break > len(pdf_reader.pages):
