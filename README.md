@@ -53,12 +53,11 @@ Add PDF, text and JSON files to ```/raw``` folder. Run ```bash python dev.py``` 
 python dev.py
 ```
 
-Text from files in 'raw' folder are extracted and added 'dummy.json'. You can edit 'dummy.json' at this step (more on that below). Once done editing, run 'dev.py' again.
+Text from files in ```/raw``` folder are extracted and added ```dummy.json```. Edit ```dummy.json``` at this step (more on that below). Once done editing, run ```python dev.py``` again.
 
-### Editing 'data.json' and 'dummy.json' files
+### Editing ```data.json``` and ```dummy.json``` files
 
 These files are structured like this:
-
 ```bash
 [
   {"title": "Page 1"
