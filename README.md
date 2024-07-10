@@ -3,7 +3,7 @@ Webdex generates a website from text, PDF and JSON files using a Python script `
 
 Get a webdex to put your research papers on the Internet for free. Read TL;DR to get your research online fast. 
 
-Webdex converts text from files into a JSON intermediate file ```data.json```. This JSON intermediate contains a list of objects, each of which builds a webpage in the website. The object (source code) for each webpage has a string ```title``` string and a list of strings ```body```. Each string in ```body``` makes a paragraph in the webpage. Hyperlinks can be added like HTML.
+Webdex converts text from files into a JSON intermediate file ```data.json```. This JSON intermediate contains a list of objects, each of which builds a webpage in the website. The object (source code) for each webpage has a string ```title``` and a list of strings ```body = [paragraph1, paragraph2]```. Each string in ```body``` makes a paragraph in the webpage. Hyperlinks can be added like HTML.
 
 ### Installation
 
