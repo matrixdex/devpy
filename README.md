@@ -67,7 +67,7 @@ File 'data.json': Contains the source code for each webpage. 'Data.json' stores 
 File 'config.json': Stores the name of the dex. This serves as the source name that is used across the script as dexname. It also stores the name of the author.
 
 ## TL; DR
-Rdev.py once. Put PDFs in raw folder. Run dev.py twice. index.html in the dex folder is your website. 
+Run dev.py once. Put PDFs in raw folder. Run dev.py twice. index.html in the dex folder is your website. 
 
 ### Next steps
 
