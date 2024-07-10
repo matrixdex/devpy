@@ -76,7 +76,8 @@ def json_to_webpages(json_file):
     pages.append({'title':f'{dexname} Dex', 'page':create_indexpage(pages) , 'html_title': 'index'})
     return pages
 
-def pdf_to_json(pdf_file):
+# deprecated
+def pdf_to_json_by_page(pdf_file):
     pdf_reader = PyPDF2.PdfReader(pdf_file)
     data=[] # list of pages if this was new dex
     for i in range(len(pdf_reader.pages)):
@@ -87,6 +88,29 @@ def pdf_to_json(pdf_file):
         title=lines[0]
         data.append({'title':title, 'body':body})
     return data
+
+def pdf_to_json(pdf_file):
+    pdf_reader = PyPDF2.PdfReader(pdf_file)
+    title=pdf_reader.metadata['/Title']
+    data=[] # list of pages if this was new dex
+    count_break=0
+    for i in range(len(pdf_reader.pages)):
+        page = pdf_reader.pages[i]
+        text = str(page.extract_text())
+        data.append(text)
+        count_break+=text.count('\n')   
+    if count_break > len(pdf_reader.pages):
+        data2=[]
+        for i in data:
+            p=''
+            s=i.split('\n')
+            for j in s:
+                p=p+j+' '
+            data2.append(p)
+        t={'title':title, 'body':data2}
+    else:
+        t={'title':title, 'body':data}
+    return t
 
 def txt_to_json(txt_path):
     with open(txt_path, 'r') as f:
@@ -152,7 +176,7 @@ def consolidate_json(json_data):
     for i in json_data:
         if i['title'] in complete.keys():
             for k in i['body']:
-                    complete[i['title']].append(k)
+                complete[i['title']].append(k)
         else:
             complete[i['title']]=i['body']
     p=[]
@@ -170,9 +194,8 @@ def parse_updates(update_path):
     updates_json = []
     for i in updates:
         if i['format']=='pdf':
-            pdf_pages=pdf_to_json(i['file_path'])
-            for i in pdf_pages:
-                updates_json.append(i)
+            pdf_page=pdf_to_json(i['file_path'])
+            updates_json.append(pdf_page)
 
         elif i['format']=='txt':
             
@@ -215,7 +238,7 @@ def create_first_json_file(path, dexname):
         "title": "Contact",
         "body": [
             "Contact <a href='manonthemoon13131@gmail.com'>manonthemoon13131@gmail.com</a> to manage your dex website.",
-            "The Matrix codebase is listed on GitHub <a href='https://github.com/orgs/matrixdex/repositories'>here</a>."
+            "Created with webdex. Find webdex on GitHub <a href='https://github.com/matrixdex/devpy'>here</a>."
         ]
     },{
         "title": "Hosting",
@@ -261,6 +284,8 @@ def save_dexname_in_config(path, dexname):
     }
     with open(path+'config.json', 'w+') as file:
         file.write(json.dumps(config_json, indent=4))
+
+# TODO
 def upload(site_folder_path): # add github manager bot
     pass
 
@@ -360,7 +385,7 @@ if __name__ == "__main__":
                 os.mkdir(update_path+'clear')
             for i in os.listdir(update_path):
                 if i != 'clear':
-                    shutil.move(update_path+i,update_path+'clear')
+                    shutil.move(update_path+i,update_path+'/clear/'+i)
             print('edit dummy.json and run script again to add dummy.json to data.json')
 
     
