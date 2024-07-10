@@ -57,7 +57,7 @@ Text from files in ```/raw``` folder are extracted and added ```dummy.json```. E
 
 ### Editing ```data.json``` and ```dummy.json``` files
 
-These files are structured like this:
+File structure:
 ```bash
 [
   {"title": "Page 1"
@@ -66,8 +66,21 @@ These files are structured like this:
   "body": ["Page 2", "<a href='page1.html'>Page 1</a>"]}
 ]
 ```
-The alphanumberic title for each page without spaces and in lowercase forms the title of the HTML file. This allows you to add links by adding the <a> tag in strings in the body object for each webpage object. Strings in 'body' form paragraphs of the webpage. This is how 'data.json' and 'dummy.json' are composed of a list of JSON objects, each representing a webpage. The title of each page is unique. In case the same title is detected for 2 objects inside the 'data.json' file or between 'data.json' and 'dummy.json' files, the objects are combined into 1 webpage with the same title and body strings combined. This can be used to edit 'dummy.json'. You can use existing titles in 'data.json' in 'dummy.json' objects to add data to a specific webpage instead of creating a new one. When 'data.json' is updated with data from 'dummy.json' (i.e. 'raw' folder) when 'dev.py' is run a second time after adding files to the 'raw' folder, a backup is made. This backup is stored in 'backup' folder as 'data.json'. This is done in case 'data.json' was updated wrongly and you'd like to go back to the original 'data.json' file without content from the 'raw' folder. Replace the 'data.json' file in the root directory with the one from the 'backup' folder and run 'dev.py' to generate the original dex (without added data). 
+Alphanumberic title for each page without spaces and in lowercase forms the title of the HTML file. Add links by adding the ```<a>``` tag in strings in the body object for each webpage object.
 
+Strings in ```body``` form paragraphs of the webpage. ```data.json``` and ```dummy.json``` are lists of JSON objects. Each object in the list represents a webpage. The title of each page is unique. In case the same title is detected for 2 objects inside the ```data.json``` file or between ```data.json``` and ```dummy.json``` files, the objects are combined into 1 webpage with the same title and body strings combined. This can be used to edit ```dummy.json```.
+
+To add to an existing page in ```data.json```, use a webpage object ```dummy.json``` objects with the same title as existing webpage object in ```data.json```. to add data to a specific webpage instead of creating a new one. 
+
+
+
+### JSON webpage strcuture
+
+Each webpage object in ```data.json``` and ```dummy.json``` is a JSON object.
+
+```bash
+{"title": "", "body": []},
+```
 
 ### Root directory structure
 
@@ -82,6 +95,10 @@ Folder 'webdex': TODO implement a library for dev.py's functionality.
 File 'data.json': Contains the source code for each webpage. 'Data.json' stores a list of objects in JSON format. Each object contains a 'title' string and a 'body' list of strings. 'Title' denotes title of the HTML page and name of the HTML file for that page for easier hyperlinking. Lowercase, space and special character (not number) removed title string forms the HTML filename. This file is meant to be edited in Visual Studio Code, using it as a word editor.
 
 File 'config.json': Stores the name of the dex. This serves as the source name that is used across the script as dexname. It also stores the name of the author.
+
+### Backup functionality
+
+When ```data.json``` is updated with data from ```dummy.json``` (from ```/raw``` folder) when ```dev.py``` is run a second time, a backup is made. This backup is stored in ```/backup``` folder as ```data.json```. If ```data.json``` was updated wrongly and you'd like to go back to the original ```data.json``` file without added content from the ```/raw``` folder, replace ```/data.json``` with ```/backup/data.json``` and run ```python dev.py``` to generate the original dex (without added data). 
 
 ### Working example
 
