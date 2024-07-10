@@ -81,7 +81,7 @@ Neural network control for smarter website generation with images, tables etc.
 
 ## Need help?
 
-Ask the human behind the dex at manonthemoon13131@gmail.com.
+Ask the human behind devpy at manonthemoon13131@gmail.com.
 
 
 
