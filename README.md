@@ -1,5 +1,5 @@
 # Webdex
-Webdex generates a website from text, PDF and JSON files using a Python script ```dev.py```. It helps freely host and rapidly update [The Matrix Dex](https://alinoorul.github.io). Webdex is built in [Research Engine](https://alinoorul.github.io/researchengine.html) so scientists host their own journals. 
+Webdex generates a website from text, PDF and JSON files using a Python script ```dev.py```. It freely hosts and rapidly updates [The Matrix Dex](https://alinoorul.github.io). Webdex is built in [Research Engine](https://alinoorul.github.io/researchengine.html) so scientists host their own journals, companies publish financial reports in HTML, users blog through Python, and more. 
 
 Get a webdex to put your research papers on the Internet for free. Read TL;DR to get your research online fast. 
 
