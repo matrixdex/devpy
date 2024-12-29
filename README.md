@@ -106,7 +106,7 @@ Neural network control for smarter website generation with images, tables etc.
 
 ## Need help?
 
-Ask the human behind dexgen at manonthemoon13131@gmail.com.
+Ask the human behind dexweb at manonthemoon13131@gmail.com.
 
 
 
