@@ -32,7 +32,7 @@ python run.py
 ```
 This generates editable ```dummy.json``` in root directory.
 
-Run ```python run.py``` again to generate webdex in ```/gen``` folder.
+Run ```python run.py``` again to make a dex in ```/gen``` folder.
 
 Editable ```dummy.json``` for hyperlinks and formatting.
 
