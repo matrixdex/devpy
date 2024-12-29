@@ -23,7 +23,9 @@ Creates supporting directories and a sample dex. Root directory where Python com
 
 ### Add files
 
-Add PDF, JSON, TXT, PPTX, and DOCX files to ```/to_add``` folder. Run
+Add PDF, JSON, TXT, PPTX, and DOCX files to ```/to_add``` folder. 
+
+Run
 
 ```bash 
 python run.py
