@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "dexweb"
+version = "4.1.3"
+dependencies = [
+  "pypdf",
+  "importlib_resources",
+  "beautifulsoup4",
+  "mammoth"
+]
+authors = [
+  { name="Noorul Ali", email="manonthemoon13131@gmail.com" },
+]
+description = "Dexweb makes dex, a programmatically generated website, to put on the web"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/matrixdex/devpy"
+Issues = "https://github.com/matrixdex/devpy"
+Documentation = "https://github.com/matrixdex/devpy/blob/main/README.md"
+Repository = "https://github.com/matrixdex/devpy.git"
