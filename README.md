@@ -5,6 +5,8 @@ Dexweb is a Python package to generate a website from text, PDF, DOCX, PPTX, and
 ```bash
 pip install dexweb
 ```
+
+```run.py```
 ```bash
 from dexweb import dexgen
 dex = dexgen.Dexgen()
