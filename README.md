@@ -13,11 +13,11 @@ dex = dexgen.Dexgen()
 ```
 Run ```python run.py``` once. Put files in ```/to_add``` folder. Run ```python run.py``` twice. ```/gen/index.html``` (in the ```/gen``` folder) is your website.
 
-[Protocol Dex](https://matrixdex.github.io) is also built by dexweb. A dex is defined as a freely shared website generated programmatically.
+## About dexweb
 
-Get a dex to put your research papers on the Internet for free. Read TL;DR to get your research online fast. 
+Dexweb converts text from files into a JSON intermediate file ```data.json```. This JSON intermediate has a list of objects, each of which generates a webpage in the website. The object (source code) for each webpage contains a string ```title``` and a list of strings ```body = [paragraph1, paragraph2]```. Each string in ```body``` makes a paragraph in the webpage. Hyperlinks, images, tables and other HTML objects are added as tags in paragraphs, like HTML.
 
-Webdex converts text from files into a JSON intermediate file ```data.json```. This JSON intermediate contains a list of objects, each of which builds a webpage in the website. The object (source code) for each webpage has a string ```title``` and a list of strings ```body = [paragraph1, paragraph2]```. Each string in ```body``` makes a paragraph in the webpage. Hyperlinks can be added like HTML.
+## Dexweb documentation
 
 ### Installation
 
