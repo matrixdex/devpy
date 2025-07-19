@@ -11,7 +11,7 @@ pip install dexweb
 from dexweb import dexgen
 dex = dexgen.Dexgen()
 ```
-Run ```python run.py``` once. Put files in ```/to_add``` folder. Run ```python run.py``` twice. ```/gen/index.html``` (in the ```/gen``` folder) is your website.
+Run ```python run.py``` once to create directories<br />Put files in ```/to_add``` folder<br />Run ```python run.py``` twice. ```/gen/index.html``` (in the ```/gen``` folder) is your website.
 
 ## About dexweb
 
