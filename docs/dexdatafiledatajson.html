@@ -1,0 +1,22 @@
+<html lang='en'>
+                        <head>
+                            <meta charset='UTF-8'>
+                            <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+                            <link rel='shortcut icon' type='image/x-icon' href='assets/favicon.ico'> <link rel='stylesheet' href='styles.css'><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css'><script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js'></script><script>hljs.highlightAll();</script>                            <title>Dex Data File (data.json) - Dexweb Docs Dex</title>
+                        </head>
+                        <body>
+                        <br>
+                        <h1>DEX DATA FILE (DATA.JSON)</h1>
+                        <br>
+                        <p><code>data.json</code> contains the source code for each webpage. data.json stores a list of objects in JSON format. Each webpage object contains a title string and a body list of strings. For example, </p><p><pre><code>data.json = 
+[{
+	'title': 'title string 1',
+	'body': [paragraph_str1, < a href='titlestring2.html'>Title String 2< /a>]},
+
+	{'title': 'title string 2',
+	'body': [paragraph_str3, < a href='titlestring1.html'>Title String 1< /a>]}
+]</code></pre></p><p>Alphanumberic title for each page without spaces and in lowercase forms the title of the HTML file. Add links by adding the < a> tag in strings in the body object for each webpage object. See example of both pages linked to each other above.</p><p>Strings in body form paragraphs of the webpage. <code>data.json</code> and <code>dummy.json</code> are lists of JSON objects. Each object in the list represents a webpage. The title of each page is unique. In case the same title is detected for 2 objects inside the <code>data.json</code> file or between <code>data.json</code> and <code>dummy.json</code> files, the objects are combined into 1 webpage with the same title and body strings combined. This functionality can be used to edit <code>dummy.json</code>.</p><p>To add to an existing page in <code>data.json</code>, use the same title in <code>dummy.json</code> for the webpage object as existing webpage object in <code>data.json</code>. This adds data to a specific webpage instead of creating a new one.</p><p>This file is edited in an editor like Visual Studio Code to display text in the dex. Paragraph strings are edited to determine content in the dex.</p><p><code>dummy.json</code> follows the same schema as <code>data.json</code></p>
+                        <br><br><br><br><br><br><br>
+                        <h3><a href='index.html'>BACK TO DEXWEB DOCS</a></h3>
+                    </body>
+                    </html>

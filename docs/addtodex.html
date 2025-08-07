@@ -1,0 +1,22 @@
+<html lang='en'>
+                        <head>
+                            <meta charset='UTF-8'>
+                            <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+                            <link rel='shortcut icon' type='image/x-icon' href='assets/favicon.ico'> <link rel='stylesheet' href='styles.css'><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css'><script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js'></script><script>hljs.highlightAll();</script>                            <title>Add to Dex - Dexweb Docs Dex</title>
+                        </head>
+                        <body>
+                        <br>
+                        <h1>ADD TO DEX</h1>
+                        <br>
+                        <p><a href='#addingfiles'>Add files</a><br><a href='#viewwebsite'>View website</a><br><a href='#addmanually'>Add data manually</a><br><a href='#editjson'>Edit data.json and dummy.json files</a></p><p><a href='#addingfiles' id='addingfiles'>Add files</a></p><p>Add PDF, JSON, TXT, PPTX and DOCX files in <code>to_add/</code> folder and run</p><p><pre><code>python run.py</code></pre></p><p>This generates editable <code>dummy.json</code> in root directory. Editable <code>dummy.json</code> is for hyperlinks and formatting. Run again to make dex in <code>gen/</code> folder</p><p><pre><code>python run.py</code></pre></p><p><a href='#viewwebsite' id='viewwebsite'>View website</a><br>Open <code>gen/index.html</code> in a browser</p><p><a href='#addmanually' id='addmanually'>Add data manually</a></p><p>Manually edit <code>data.json</code>. Run to regenerate website with new data (no backup functionality)</p><p><pre><code>python run.py</code></pre></p><p><a href='#editjson' id='editjson'>Edit data.json and dummy.json files</a></p><p><code>data.json</code> contains the source code for each webpage. data.json stores a list of objects in JSON format. Each webpage object contains a title string and a body list of strings. For example, </p><p><pre><code>data.json = 
+[{
+	'title': 'title string 1',
+	'body': [paragraph_str1, < a href='titlestring2.html'>Title String 2< /a>]},
+
+	{'title': 'title string 2',
+	'body': [paragraph_str3, < a href='titlestring1.html'>Title String 1< /a>]}
+]</code></pre></p><p>Alphanumberic title for each page without spaces and in lowercase forms the title of the HTML file. Add links by adding the < a> tag in strings in the body object for each webpage object. See example of both pages linked to each other above.</p><p>Strings in body form paragraphs of the webpage. <code>data.json</code> and <code>dummy.json</code> are lists of JSON objects. Each object in the list represents a webpage. The title of each page is unique. In case the same title is detected for 2 objects inside the <code>data.json</code> file or between <code>data.json</code> and <code>dummy.json</code> files, the objects are combined into 1 webpage with the same title and body strings combined. This functionality can be used to edit <code>dummy.json</code>.</p><p>To add to an existing page in <code>data.json</code>, use the same title in <code>dummy.json</code> for the webpage object as existing webpage object in <code>data.json</code>. This adds data to a specific webpage instead of creating a new one.</p>
+                        <br><br><br><br><br><br><br>
+                        <h3><a href='index.html'>BACK TO DEXWEB DOCS</a></h3>
+                    </body>
+                    </html>
